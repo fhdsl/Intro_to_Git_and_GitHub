@@ -5,17 +5,16 @@ ottrpal::set_knitr_image_path()
 
 # Introduction
 
+You will learn how to use Git, a version control system that is the primary means of doing reproducible and collaborative research. You will use Git from the command line to document the history of your code, create different versions of your code, and share your code with an audience via GitHub!
 
-## Motivation
+Prerequisites: Completion of Intro to Command Line or demonstrating competency.
 
 
 ## Target Audience  
 
-The course is intended for ...
+Researchers who want to keep track the history of their code at a professional standard, and share it with an audience.
 
-## Curriculum  
 
-The course covers...
 
 
 ```{r}
