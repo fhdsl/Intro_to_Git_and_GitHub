@@ -1,5 +1,5 @@
 ---
-title: "Intro to Command Line, Season 1"
+title: "Intro to Git and GitHub, Season 1"
 date: "October, 2023"
 site: bookdown::bookdown_site
 documentclass: book
@@ -15,11 +15,14 @@ output:
 
 # About this Course
 
-Fluency in programming and data science requires using computer software from the Command Line, a text-based way of controlling the computer. You will go on a guided under-the-hood tour behind the graphical interface we typically use: you will learn how to interact and manipulate files, folders, and software via the Command Line.
 
-Targeted audience: Researchers who want to use scientific software launched from the command line, want to use a high-performance cluster computing environment, or want to use a cloud computing environment.
+You will learn how to use Git, a version control system that is the primary means of doing reproducible and collaborative research. You will use Git from the command line to document the history of your code, create different versions of your code, and share your code with an audience via GitHub!
 
-Commitment: A 1.5 hour seminar.
+Prerequisites: Completion of Intro to Command Line or demonstrating competency.
+
+Targeted Audience: Researchers who want to keep track the history of their code at a professional standard, and share it with an audience.
+
+
 
 
 
