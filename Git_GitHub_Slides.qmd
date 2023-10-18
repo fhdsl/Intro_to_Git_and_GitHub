@@ -6,6 +6,10 @@ format:
     scrollable: true
 ---
 
+## Intro to Git and GitHub
+
+![](images/Git_1.png)
+
 ## Introductions
 
 -   Who am I?
@@ -22,7 +26,7 @@ format:
 
     -   What brought you here?
 
-    -   Best Halloween costume you have seen?
+    -   If you want to share: an inspiring Halloween costume you have seen.
 
 ## Goals of the seminar
 
@@ -48,7 +52,7 @@ format:
 
 "Version control is a system that records changes to a set of files over time so that you can recall specific versions later."
 
-. . . 
+. . .
 
 ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTDzi606UzrbRCCuTBOQBGfpOuDVqlEgJHwkQ_gusPVA0gPsbS76gAGOMPiLEkq4OW6yI&usqp=CAU)
 
@@ -168,7 +172,7 @@ nothing to commit (create/copy files and use "git add" to track)
 
 . . .
 
-Once Git **tracks** your file, Git assigns it three main states:
+Once Git **tracks** your file, it can have 3 possible states:
 
 . . .
 
@@ -188,9 +192,7 @@ Why offer this intermediate staging ground?
 
 . . .
 
--   Temporary files
-
--   Sensitive PHI files
+-   Temporary or sensitive files
 
 -   Not ready for a commit yet
 
@@ -242,6 +244,10 @@ clo2@MGQQR2YQRT9 sandbox git status
 On branch main
 nothing to commit, working tree clean
 ```
+
+## Staging model revisited
+
+![](images/git_workflow1.svg)
 
 ## Exercises
 
@@ -331,6 +337,10 @@ To https://github.com/caalo/sandbox.git
  * [new branch]      main -> main
 ```
 
+## Staging model revisited
+
+![](images/git_workflow2.svg)
+
 ## Commit before Push
 
 Now, everything is synced up between our local repository and the remote repository.
@@ -369,3 +379,7 @@ See our [guide](https://hutchdatascience.org/dasl-snack-github/making-a-pull-req
 -   [GitHub Desktop](https://desktop.github.com/)
 
 -   [RStudio with usethis package](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html)
+
+**A nice troubleshooting guide**
+
+[DangItGit](https://dangitgit.com/en)
