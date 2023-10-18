@@ -11,6 +11,7 @@ optional-change-text-editor
 setting-up-a-local-repository
 staging-model-to-make-commits
 making-your-first-commit
+staging-model-revisited
 exercises
 tricks
 git-log
