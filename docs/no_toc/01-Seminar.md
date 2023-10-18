@@ -230,6 +230,10 @@ Changes to be committed:
 
 You should finish the commit by `git commit`.
 
+## Staging model revisited
+
+![](images/git_workflow1.svg)
+
 ## Exercises
 
 -   Make some changes and make another commit by yourself.
@@ -384,6 +388,10 @@ Date:   Thu Sep 7 13:19:41 2023 -0700
 
 Our latest commit is associated with `origin/main`, which refers to the remote name `origin` and the `main` branch on the remote. Everything is synced up between our local repository and the remote repository. You can see your GitHub website updated with the changes.
 
+Now, here is what our staging model looks like: 
+
+![](images/git_workflow2.svg)
+
 If you make a new commit, but don't push it yet, what happens?
 
 ```         
@@ -439,6 +447,10 @@ If interfacing with Git is not your favorite way to do so, there are GUI-based s
 -   [GitHub Desktop](https://desktop.github.com/)
 
 -   [RStudio with usethis package](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html)
+
+**A nice troubleshooting guide**
+
+[DangItGit](https://dangitgit.com/en)
 
 ## Appendix: References
 
