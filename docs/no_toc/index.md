@@ -1,6 +1,6 @@
 ---
-title: "Intro to Git and GitHub, Season 1"
-date: "October, 2023"
+title: "Intro to Git and GitHub, Season 2"
+date: "January, 2024"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
