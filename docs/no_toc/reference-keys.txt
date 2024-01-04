@@ -1,5 +1,5 @@
 about-this-course
-introduction-to-git-and-github
+introduction-to-git
 why-version-control
 the-git-data-model
 set-up
