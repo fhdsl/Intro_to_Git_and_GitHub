@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="Git_GitHub_Slides_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Git_GitHub_Slides_files/libs/quarto-html/tabby.min.js"></script>
-<script src="Git_GitHub_Slides_files/libs/quarto-html/popper.min.js"></script>
-<script src="Git_GitHub_Slides_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="Git_GitHub_Slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Git_GitHub_Slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="Git_GitHub_Slides_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="Git_GitHub_Slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="Git_Slides_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Git_Slides_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Git_Slides_files/libs/quarto-html/popper.min.js"></script>
+<script src="Git_Slides_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Git_Slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Git_Slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Git_Slides_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="Git_Slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.353">
 
-  <title>Intro to Git and GitHub</title>
+  <title>Intro to Git</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="Git_GitHub_Slides_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="Git_GitHub_Slides_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="Git_Slides_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Git_Slides_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,11 +29,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="Git_GitHub_Slides_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="Git_GitHub_Slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="Git_GitHub_Slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="Git_GitHub_Slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="Git_GitHub_Slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="Git_Slides_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="Git_Slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Git_Slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Git_Slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Git_Slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -325,16 +325,16 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Intro to Git and GitHub</h1>
+  <h1 class="title">Intro to Git</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="intro-to-git-and-github" class="slide level2">
-<h2>Intro to Git and GitHub</h2>
+<section id="intro-to-git" class="slide level2">
+<h2>Intro to Git</h2>
 
-<img data-src="images/Git_1.png" class="r-stretch"></section>
+<img data-src="images/Git.png" class="r-stretch"></section>
 <section id="introductions" class="slide level2">
 <h2>Introductions</h2>
 <ul>
@@ -351,13 +351,12 @@
 <ul>
 <li><p>Name, pronouns, group you work in</p></li>
 <li><p>What brought you here?</p></li>
-<li><p>If you want to share: an inspiring Halloween costume you have seen.</p></li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="goals-of-the-seminar" class="slide level2">
-<h2>Goals of the seminar</h2>
+<section id="goals-of-the-workshop" class="slide level2">
+<h2>Goals of the workshop</h2>
 <div class="fragment">
 <ul>
 <li>Understand the need for version control.</li>
@@ -435,7 +434,7 @@
 <section id="set-up" class="slide level2">
 <h2>Set up</h2>
 <ol type="1">
-<li>Create a GitHub account and login: https://github.com/login</li>
+<li>Login to your GitHub account: https://github.com/login</li>
 </ol>
 <div class="fragment">
 <ol start="2" type="1">
@@ -443,17 +442,10 @@
 </ol>
 </div>
 <div class="fragment">
-<ol start="3" type="1">
-<li>Click on the “shell” tab in your Replit space, and enter the following in the shell:</li>
-</ol>
-<pre><code>git config --global user.name "Your Name"
-git config --global user.email "address@email.com"</code></pre>
-</div>
-<div class="fragment">
 <ol start="4" type="1">
 <li>In your Replit shell,</li>
 </ol>
-<pre><code>gh auth login</code></pre>
+<pre><code>sh setup.sh</code></pre>
 <p>You will be asked how you want to log in, and pick the following:</p>
 <pre><code>? What account do you want to log into? GitHub.com
 ? What is your preferred protocol for Git operations? HTTPS
@@ -637,19 +629,12 @@ Date:   Tue Oct 17 18:13:59 2023 +0000
 <p>If you make a new commit, but don’t push it yet, what happens?</p>
 </div>
 </section>
-<section id="future-seminars" class="slide level2">
-<h2>Future seminars</h2>
-<div class="fragment">
-<p>We will talk more about collaboration using branches and pull requests in the future.</p>
-<p>See our <a href="https://hutchdatascience.org/dasl-snack-github/making-a-pull-request-beginners.html">guide</a>.</p>
-</div>
-</section>
 <section id="other-ways-of-interacting-with-git-and-github" class="slide level2">
 <h2>Other ways of interacting with Git and GitHub</h2>
 <ul>
-<li><p><a href="https://www.gitkraken.com/">Git Kraken</a></p></li>
 <li><p><a href="https://desktop.github.com/">GitHub Desktop</a></p></li>
 <li><p><a href="https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html">RStudio with usethis package</a></p></li>
+<li><p><a href="https://www.gitkraken.com/">GitKraken</a></p></li>
 </ul>
 <p><strong>A nice troubleshooting guide</strong></p>
 <p><a href="https://dangitgit.com/en">DangItGit</a></p>
@@ -661,19 +646,19 @@ Date:   Tue Oct 17 18:13:59 2023 +0000
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="Git_GitHub_Slides_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="Git_Slides_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="Git_GitHub_Slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="Git_GitHub_Slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="Git_GitHub_Slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="Git_GitHub_Slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="Git_GitHub_Slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="Git_Slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Git_Slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Git_Slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Git_Slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Git_Slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="Git_GitHub_Slides_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="Git_GitHub_Slides_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="Git_GitHub_Slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="Git_GitHub_Slides_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="Git_Slides_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Git_Slides_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Git_Slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Git_Slides_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

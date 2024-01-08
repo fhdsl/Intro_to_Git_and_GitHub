@@ -1,14 +1,14 @@
 ---
-title: "Intro to Git and GitHub"
+title: "Intro to Git"
 format: 
   revealjs:
     smaller: true
     scrollable: true
 ---
 
-## Intro to Git and GitHub
+## Intro to Git
 
-![](images/Git_1.png)
+![](images/Git.png)
 
 ## Introductions
 
@@ -26,9 +26,8 @@ format:
 
     -   What brought you here?
 
-    -   If you want to share: an inspiring Halloween costume you have seen.
 
-## Goals of the seminar
+## Goals of the workshop
 
 . . .
 
@@ -112,7 +111,7 @@ o <-- o <-- o <-- o <---- o
 
 ## Set up
 
-1.  Create a GitHub account and login: https://github.com/login
+1.  Login to your GitHub account: https://github.com/login
 
 . . .
 
@@ -120,19 +119,10 @@ o <-- o <-- o <-- o <---- o
 
 . . .
 
-3.  Click on the "shell" tab in your Replit space, and enter the following in the shell:
-
-```         
-git config --global user.name "Your Name"
-git config --global user.email "address@email.com"
-```
-
-. . .
-
 4.  In your Replit shell,
 
 ```         
-gh auth login
+sh setup.sh
 ```
 
 You will be asked how you want to log in, and pick the following:
@@ -364,21 +354,14 @@ Date:   Tue Oct 17 18:13:59 2023 +0000
 
 If you make a new commit, but don't push it yet, what happens?
 
-## Future seminars
-
-. . .
-
-We will talk more about collaboration using branches and pull requests in the future.
-
-See our [guide](https://hutchdatascience.org/dasl-snack-github/making-a-pull-request-beginners.html).
 
 ## Other ways of interacting with Git and GitHub
-
--   [Git Kraken](https://www.gitkraken.com/)
 
 -   [GitHub Desktop](https://desktop.github.com/)
 
 -   [RStudio with usethis package](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html)
+
+-   [GitKraken](https://www.gitkraken.com/)
 
 **A nice troubleshooting guide**
 
