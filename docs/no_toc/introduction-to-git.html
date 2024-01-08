@@ -79,10 +79,11 @@
 <li class="chapter" data-level="2.3" data-path="introduction-to-git.html"><a href="introduction-to-git.html#set-up"><i class="fa fa-check"></i><b>2.3</b> Set up</a>
 <ul>
 <li class="chapter" data-level="2.3.1" data-path="introduction-to-git.html"><a href="introduction-to-git.html#installing-git"><i class="fa fa-check"></i><b>2.3.1</b> Installing Git</a></li>
-<li class="chapter" data-level="2.3.2" data-path="introduction-to-git.html"><a href="introduction-to-git.html#create-a-github-account"><i class="fa fa-check"></i><b>2.3.2</b> Create a GitHub account</a></li>
-<li class="chapter" data-level="2.3.3" data-path="introduction-to-git.html"><a href="introduction-to-git.html#adding-your-information-for-git"><i class="fa fa-check"></i><b>2.3.3</b> Adding your information for Git</a></li>
-<li class="chapter" data-level="2.3.4" data-path="introduction-to-git.html"><a href="introduction-to-git.html#connecting-git-to-your-github-account"><i class="fa fa-check"></i><b>2.3.4</b> Connecting Git to your GitHub account</a></li>
-<li class="chapter" data-level="2.3.5" data-path="introduction-to-git.html"><a href="introduction-to-git.html#optional-change-text-editor"><i class="fa fa-check"></i><b>2.3.5</b> Optional: change text editor</a></li>
+<li class="chapter" data-level="2.3.2" data-path="introduction-to-git.html"><a href="introduction-to-git.html#installing-github-command-line-tools"><i class="fa fa-check"></i><b>2.3.2</b> Installing GitHub Command Line Tools</a></li>
+<li class="chapter" data-level="2.3.3" data-path="introduction-to-git.html"><a href="introduction-to-git.html#create-a-github-account"><i class="fa fa-check"></i><b>2.3.3</b> Create a GitHub account</a></li>
+<li class="chapter" data-level="2.3.4" data-path="introduction-to-git.html"><a href="introduction-to-git.html#adding-your-information-for-git"><i class="fa fa-check"></i><b>2.3.4</b> Adding your information for Git</a></li>
+<li class="chapter" data-level="2.3.5" data-path="introduction-to-git.html"><a href="introduction-to-git.html#connecting-git-to-your-github-account"><i class="fa fa-check"></i><b>2.3.5</b> Connecting Git to your GitHub account</a></li>
+<li class="chapter" data-level="2.3.6" data-path="introduction-to-git.html"><a href="introduction-to-git.html#optional-change-text-editor"><i class="fa fa-check"></i><b>2.3.6</b> Optional: change text editor</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="introduction-to-git.html"><a href="introduction-to-git.html#setting-up-a-local-repository"><i class="fa fa-check"></i><b>2.4</b> Setting up a local repository</a></li>
 <li class="chapter" data-level="2.5" data-path="introduction-to-git.html"><a href="introduction-to-git.html#staging-model-to-make-commits"><i class="fa fa-check"></i><b>2.5</b> Staging Model to make commits</a></li>
@@ -184,7 +185,7 @@
             ^            /
              \          v
               --- o &lt;-- o</code></pre>
-<p>This workflow of branching and merging is extremely popular in collaborative work, and we will hold future seminars on mastering it.</p>
+<p>This workflow of branching and merging is extremely popular in collaborative work, and we will hold future workshops on mastering it.</p>
 </div>
 <div id="set-up" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Set up</h2>
@@ -192,20 +193,24 @@
 <h3><span class="header-section-number">2.3.1</span> Installing Git</h3>
 <p>If you are learning via replit, then Git is already installed. See this guide for <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">installation info</a> on your local computer.</p>
 </div>
-<div id="create-a-github-account" class="section level3" number="2.3.2">
-<h3><span class="header-section-number">2.3.2</span> Create a GitHub account</h3>
+<div id="installing-github-command-line-tools" class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Installing GitHub Command Line Tools</h3>
+<p>If you are learning via replit, then GitHub Command Line Tools is already installed. See this website for <a href="https://cli.github.com/">installation info</a> on your local computer.</p>
+</div>
+<div id="create-a-github-account" class="section level3" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Create a GitHub account</h3>
 <p>Create your GitHub account <a href="https://github.com/login">here</a>.</p>
 </div>
-<div id="adding-your-information-for-git" class="section level3" number="2.3.3">
-<h3><span class="header-section-number">2.3.3</span> Adding your information for Git</h3>
+<div id="adding-your-information-for-git" class="section level3" number="2.3.4">
+<h3><span class="header-section-number">2.3.4</span> Adding your information for Git</h3>
 <p>This helps Git record your author information when you make commits:</p>
 <pre><code>% git config --global user.name &quot;Your Name&quot;
 % git config --global user.email &quot;address@email.com&quot;</code></pre>
-<p>Replace <code>Your Name</code> with your name and <code>address@email.com</code> with your email address you used for your GitHub account.</p>
+<p>Replace <code>Your Name</code> with your name and <code>address@email.com</code> with your email address.</p>
 </div>
-<div id="connecting-git-to-your-github-account" class="section level3" number="2.3.4">
-<h3><span class="header-section-number">2.3.4</span> Connecting Git to your GitHub account</h3>
-<p>We change the settings of your Git software so that it connects to your GitHub account:</p>
+<div id="connecting-git-to-your-github-account" class="section level3" number="2.3.5">
+<h3><span class="header-section-number">2.3.5</span> Connecting Git to your GitHub account</h3>
+<p>We connect Git to your GitHub account via GitHub CLI:</p>
 <pre><code>% gh auth login</code></pre>
 <p>You will be asked how you want to log in, and pick the following:</p>
 <pre><code>? What account do you want to log into? GitHub.com
@@ -214,8 +219,8 @@
 ? How would you like to authenticate GitHub CLI? Login with a web browser</code></pre>
 <p>You will be given a code, and you will provide that code to GitHub via <a href="https://github.com/login/device" class="uri">https://github.com/login/device</a>.</p>
 </div>
-<div id="optional-change-text-editor" class="section level3" number="2.3.5">
-<h3><span class="header-section-number">2.3.5</span> Optional: change text editor</h3>
+<div id="optional-change-text-editor" class="section level3" number="2.3.6">
+<h3><span class="header-section-number">2.3.6</span> Optional: change text editor</h3>
 <p>We will tell Git what text editor to use to create commit messages. If you are new to command line text editors, <code>nano</code> is a simple one to learn. Other common ones are <code>vim</code> and <code>emacs</code>.</p>
 <pre><code>% git config --global core.editor &quot;nano&quot;</code></pre>
 </div>
@@ -343,7 +348,7 @@ Date:   Wed Sep 6 12:15:44 2023 -0700
     Added README</code></pre>
 <p>Each commit is associated with an identifier of numbers and letters, for security purposes. We will refer to these commit identifiers if we need to look back into the history of our commits.</p>
 <p>Two other things to notice, that we will dive deeper in the future:</p>
-<p>The <code>HEAD</code> <strong>pointer</strong> tells us “What am I looking at?” in our commit history. If we want to look back into the history of the commits, then we need to move the <code>HEAD</code> pointer. <code>main</code> refers to the <strong>main branch</strong> of this repository. If we create different branches, then we need to make a distinction between the <code>main</code> and other branches created. In summary, we are looking at the most recent commit on the <code>main</code> branch, because <code>HEAD</code> is pointing to it.</p>
+<p>The <code>HEAD</code> <strong>pointer</strong> tells us “What am I looking at?” in our file system. If we want to look back into the history of the commits, then we need to move the <code>HEAD</code> pointer. <code>main</code> refers to the <strong>main branch</strong> of this repository. If we create different branches, then we need to make a distinction between the <code>main</code> and other branches created. In summary, we are looking at the most recent commit on the <code>main</code> branch, because <code>HEAD</code> is pointing to it.</p>
 <div id="looking-back-at-history" class="section level3" number="2.9.1">
 <h3><span class="header-section-number">2.9.1</span> Looking back at history</h3>
 <p>We can move the <code>HEAD</code> pointer to see the history of this repository. Let’s point it to an older commit:</p>
