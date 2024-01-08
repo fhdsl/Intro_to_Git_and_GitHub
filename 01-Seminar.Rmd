@@ -54,13 +54,19 @@ o <-- o <-- o <-- o <---- o
               --- o <-- o
 ```
 
-This workflow of branching and merging is extremely popular in collaborative work, and we will hold future seminars on mastering it.
+This workflow of branching and merging is extremely popular in collaborative work, and we will hold future workshops on mastering it.
 
 ## Set up
 
 ### Installing Git
 
 If you are learning via replit, then Git is already installed. See this guide for [installation info](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on your local computer.
+
+### Installing GitHub Command Line Tools
+
+If you are learning via replit, then GitHub Command Line Tools is already installed. See this website for [installation info](https://cli.github.com/
+) on your local computer.
+
 
 ### Create a GitHub account
 
@@ -75,11 +81,11 @@ This helps Git record your author information when you make commits:
 % git config --global user.email "address@email.com"
 ```
 
-Replace `Your Name` with your name and `address@email.com` with your email address you used for your GitHub account.
+Replace `Your Name` with your name and `address@email.com` with your email address.
 
 ### Connecting Git to your GitHub account
 
-We change the settings of your Git software so that it connects to your GitHub account:
+We connect Git to your GitHub account via GitHub CLI:
 
 ```         
 % gh auth login
@@ -274,7 +280,7 @@ Each commit is associated with an identifier of numbers and letters, for securit
 
 Two other things to notice, that we will dive deeper in the future:
 
-The `HEAD` **pointer** tells us "What am I looking at?" in our commit history. If we want to look back into the history of the commits, then we need to move the `HEAD` pointer. `main` refers to the **main branch** of this repository. If we create different branches, then we need to make a distinction between the `main` and other branches created. In summary, we are looking at the most recent commit on the `main` branch, because `HEAD` is pointing to it.
+The `HEAD` **pointer** tells us "What am I looking at?" in our file system. If we want to look back into the history of the commits, then we need to move the `HEAD` pointer. `main` refers to the **main branch** of this repository. If we create different branches, then we need to make a distinction between the `main` and other branches created. In summary, we are looking at the most recent commit on the `main` branch, because `HEAD` is pointing to it.
 
 ### Looking back at history
 
