@@ -4,6 +4,7 @@ why-version-control
 the-git-data-model
 set-up
 installing-git
+installing-github-command-line-tools
 create-a-github-account
 adding-your-information-for-git
 connecting-git-to-your-github-account
