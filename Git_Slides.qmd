@@ -26,7 +26,6 @@ format:
 
     -   What brought you here?
 
-
 ## Goals of the workshop
 
 . . .
@@ -77,6 +76,10 @@ format:
 
 ![](https://git-scm.com/book/en/v2/images/snapshots.png)
 
+. . .
+
+When do you make a commit?
+
 ## Git's Data Model with "branching" and "merging"
 
 . . .
@@ -111,15 +114,11 @@ o <-- o <-- o <-- o <---- o
 
 ## Set up
 
-1.  Login to your GitHub account: https://github.com/login
+1.  Create a Replit account and "fork" this project: https://replit.com/@ChrisLo6/IntroGitDaSL
 
 . . .
 
-2.  Create a Replit account and "fork" this project: https://replit.com/@ChrisLo6/GitAndGitHubDaSL
-
-. . .
-
-4.  In your Replit shell,
+2.  In your Replit shell,
 
 ```         
 sh setup.sh
@@ -128,6 +127,7 @@ sh setup.sh
 You will be asked how you want to log in, and pick the following:
 
 ```         
+Link for authentication: https://github.com/login/device
 ? What account do you want to log into? GitHub.com
 ? What is your preferred protocol for Git operations? HTTPS
 ? Authenticate Git with your GitHub credentials? Yes
@@ -353,7 +353,6 @@ Date:   Tue Oct 17 18:13:59 2023 +0000
 . . .
 
 If you make a new commit, but don't push it yet, what happens?
-
 
 ## Other ways of interacting with Git and GitHub
 
