@@ -29,3 +29,11 @@ future-seminars
 appendix-other-ways-of-interacting-with-git-and-github
 appendix-references
 references
+optional-change-the-text-editor
+cloning-a-repository
+optional-undoing
+connecting-to-github-remote
+branching-and-merging
+branching
+pull-requests
+merge-conflicts-during-pull-requests

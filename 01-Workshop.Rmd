@@ -1,4 +1,4 @@
-# Introduction to Git
+# Introduction to Git and GitHub
 
 ## Why version control?
 
@@ -56,7 +56,7 @@ If you are learning via [replit](https://replit.com/@ChrisLo6/IntroGitDaSL), the
 
 ### Installing GitHub Command Line Tools
 
-If you are learning via replit, then GitHub Command Line Tools is already installed. See this website for [installation info](https://cli.github.com/) on your local computer. This is a piece of software that allows you to connect to GitHub from the command line.
+If you are learning via [replit](https://replit.com/@ChrisLo6/IntroGitDaSL), then GitHub Command Line Tools is already installed. See this website for [installation info](https://cli.github.com/) on your local computer. This is a piece of software that allows you to connect to GitHub from the command line.
 
 ### Create a GitHub account
 
@@ -102,7 +102,7 @@ We will tell Git what text editor to use to create commit messages. If you are n
 
 ## Cloning a repository
 
-We make a copy of a remote GitHub repository (<https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice>) locally on our computer to practice. In order to do that,
+We make a copy of a remote GitHub repository (<https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice>) locally on our computer to practice. In order to do that, use the command `git clone [repository URL]`:
 
 ```         
 % git clone https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice.git
@@ -135,7 +135,7 @@ drwxr-xr-x   4 clo2  staff  128 Sep  5 16:15 refs
 % cd ..
 ```
 
-Let's exit this folder and run `git status` to understand the current state of this repository.
+Let's run `git status` to understand the current state of this repository.
 
 ```         
 ~/IntroGitDaSL/Collaborative_Git_GitHub_Student_Practice$ git status
@@ -231,35 +231,9 @@ Changes to be committed:
 
 You should finish the commit by `git commit`.
 
-## Staging model revisited
+## Staging model illustrated
 
 ![](images/git_workflow1.svg)
-
-## Optional: Undoing
-
-### Unstage a file
-
-Suppose you staged a file, and then realized you don't want the file to be staged for the commit. To unstage the file so that it returns to "modified", run `git restore --staged [fileName]`.
-
-### Unmodify a file
-
-After your commit, you make some new changes to a file so that it is "modified" You realized that you are no longer interested in this modification and want to un-modify it back to the last commit. Run: `git restore [fileName]`.
-
-*Warning: This cannot be undone!*
-
-### Revert a commit
-
-After several commits, you realized that you wanted to undo a specific commit. Run: `git revert [commit identifier]`. This will undo that commit. However, if the content of that commit has experienced intermediate changes, it will raise a conflict.
-
-You can find the "commit identifier" via `git log` to see your commit history.
-
-### Reset to a previous commit
-
-To "time-travel" back to a previous commit, run: `git reset --hard [commit identifier]`.
-
-You can find the "commit identifier" via `git log` to see your commit history.
-
-*Warning: This cannot be undone!*
 
 ## Connecting to GitHub (remote)
 
@@ -282,13 +256,15 @@ To https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice.git
 
 If someone else has made updates to the remote repository and you want to update it locally, use `git pull`.
 
+Also, if the remote repository has been updated since you did `git pull`, you will have to run `git pull` before you can run `git push`.
+
 Now, here is what our staging model looks like:
 
 ![](images/git_workflow2.svg)
 
 ## Branching and Merging
 
-So far, we have considered just working on our own. But when multiple people work on a GitHub repository, how can we keep track of multiple people's work clearly and transparently without stepping on each others' toes?
+So far, we have focused on doing version control on our own work. But when multiple people work on a GitHub repository, how can we keep track of multiple people's work clearly and transparently without stepping on each others' toes?
 
 Suppose we start a project in a linear commit structure, as before:
 
@@ -314,7 +290,7 @@ o <-- o <-- o <-- o <---- o
               --- o <-- o
 ```
 
-This process in Git is called **branching**, when two branching commit paths are created, and **merging**, when two branches are integrated together.
+This process in Git is called **branching**, when two branching commit paths are created, and **merging**, when two branches are integrated together. There needs to be clear communication when branches are merged, which is done on GitHub via a **pull request**.
 
 This branch and merge workflow can be used for collaborative projects, but can also be useful for a single user. A project maintained by one developer may branch out into various working ideas, and this branch and merge workflow keeps track of that nicely.
 
@@ -359,7 +335,7 @@ When you have pushed changes to the branch, you will see an option to *"Compare 
 
 ## Pull Requests
 
-A **pull request** is a way to propose changes from a branch before it is merged back into the main repository. It is just like `git merge`, but it requires more documentation and confirmation. For instance, a collaborator can create their own work on a branch, and then create a pull request to have that new branch's feature to be integrated back to the main branch. The owner of the repository sometimes review the proposed changes before accepting the pull request.
+A **pull request** is a way to propose changes from a branch before it is merged back into the main repository. For instance, a collaborator can create their own work on a branch, and then create a pull request to have that new branch's feature to be integrated back to the main branch. The owner of the repository sometimes review the proposed changes before accepting the pull request.
 
 ![](images/git_PR_illustration.png)
 
