@@ -1,8 +1,8 @@
-book_filename: "Intro to Command Line, Season 1"
+book_filename: "Intro to Git and GitHub, Season 3"
 chapter_name: "Chapter "
 repo: https://github.com/jhudsl/OTTR_Template/
 rmd_files: ["index.Rmd",
-            "01-Seminar.Rmd",
+            "01-Workshop.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes

@@ -1,5 +1,5 @@
 ---
-title: "Intro to Git and GitHub, Season 2"
+title: "Intro to Git and GitHub, Season 3"
 date: "`r format(Sys.time(), '%B, %Y')`"
 site: bookdown::bookdown_site
 documentclass: book
