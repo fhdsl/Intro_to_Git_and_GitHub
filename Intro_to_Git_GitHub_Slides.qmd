@@ -1,0 +1,472 @@
+---
+title: "Intro to Git"
+format: 
+  revealjs:
+    smaller: true
+    scrollable: true
+---
+
+## Intro to Git and GitHub
+
+![](images/Git.png)
+
+## Introductions
+
+-   Who am I?
+
+. . .
+
+-   What is DaSL?
+
+. . .
+
+-   Who are you?
+
+    -   Name, pronouns, group you work in
+
+    -   What brought you here?
+
+
+## Goals of the workshop
+
+. . .
+
+-   Understand the need for version control.
+
+. . .
+
+-   Be able to describe Git's data model.
+
+. . .
+
+-   How to change a file from Modified, Staged, and Committed states in the command line.
+
+. . .
+
+-   How to connect to GitHub
+
+. . .
+
+-   How to Branch and Merge via a Pull Request
+
+
+## Why version control?
+
+. . .
+
+"Version control is a system that records changes to a set of files over time so that you can recall specific versions later."
+
+. . .
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTDzi606UzrbRCCuTBOQBGfpOuDVqlEgJHwkQ_gusPVA0gPsbS76gAGOMPiLEkq4OW6yI&usqp=CAU)
+
+. . .
+
+![](images/git_motivation.png){width="400"}
+
+## Git, notoriously
+
+![](https://imgs.xkcd.com/comics/git.png)
+
+## Git's Data Model
+
+. . .
+
+-   Git keeps track of a project within a designated directory, which is called a **repository** (also known as **repo**).
+
+. . .
+
+-   You can save the state of your repository by making a **commit**: Git will save the repository's **directory tree**, a link to the previous commit, and metadata.
+
+. . .
+
+![](https://git-scm.com/book/en/v2/images/snapshots.png)
+
+## Git's Data Model with "branching" and "merging"
+
+. . .
+
+Linear:
+
+```         
+o <-- o <-- o <-- o
+```
+
+. . .
+
+Branching:
+
+```         
+o <-- o <-- o <-- o
+            ^
+             \
+              --- o <-- o
+```
+
+. . .
+
+Branching and Merging:
+
+```         
+o <-- o <-- o <-- o <---- o
+            ^            /
+             \          v
+              --- o <-- o
+```
+
+## Cloning a repository
+
+Create a Replit account and "fork" this project: https://replit.com/@ChrisLo6/GitAndGitHubDaSL
+
+. . .
+
+We will make a copy of this repository: https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice
+
+. . .
+
+```         
+% git clone https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice.git
+Cloning into 'Collaborative_Git_GitHub_Student_Practice'...
+remote: Enumerating objects: 94, done.
+remote: Counting objects: 100% (51/51), done.
+remote: Compressing objects: 100% (45/45), done.
+remote: Total 94 (delta 32), reused 12 (delta 5), pack-reused 43
+Receiving objects: 100% (94/94), 23.52 KiB | 7.84 MiB/s, done.
+Resolving deltas: 100% (37/37), done.
+
+% cd Collaborative_Git_GitHub_Student_Practice/
+```
+
+## Git status
+
+We look at our repository's status:
+
+```         
+git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+```
+
+## Git's Staging Model
+
+. . .
+
+Once Git **tracks** your file, it can have 3 possible states:
+
+. . .
+
+-   **Modified** means that you have changed the file but have not committed it to your local repository yet.
+
+. . .
+
+-   **Staged** means that you have marked a modified file in its current version to go into your next commit.
+
+. . .
+
+-   **Committed** means that the data is safely stored in your local repository.
+
+. . .
+
+Why offer this intermediate staging ground?
+
+. . .
+
+-   Temporary or sensitive files
+
+-   Not ready for a commit yet
+
+## Making your first commit
+
+. . .
+
+Create a file:
+
+```         
+touch README
+```
+
+```         
+git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+    README
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+. . .
+
+It hasn't been **tracked** yet. Add it to be tracked and **staged**.
+
+```         
+git add README 
+
+git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+    new file:   README
+```
+
+. . .
+
+**Commit** it with a message:
+
+```         
+git commit -m "Added README"
+[main bb926a2] Added README
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README
+ 
+clo2@MGQQR2YQRT9 sandbox git status
+On branch main
+nothing to commit, working tree clean
+```
+
+## Staging model revisited
+
+![](images/git_workflow1.svg)
+
+## Exercises
+
+-   Make some changes and make another commit by yourself.
+
+
+## Connecting to GitHub as a remote
+
+. . .
+
+**Remotes** are repositories hosted often on a server, such as GitHub, so that other people can access the the remote from their local computer.
+
+. . .
+
+We need to authenticate our GitHub account locally so that we have the permission to update the remote GitHub repository.
+
+
+## Set up
+
+1.  Login to your GitHub account: https://github.com/login
+
+. . .
+
+
+2.  In your Replit shell,
+
+```         
+sh ../setup.sh
+```
+
+You will be asked how you want to log in, and pick the following:
+
+```         
+? What account do you want to log into? GitHub.com
+? What is your preferred protocol for Git operations? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Login with a web browser
+```
+
+You will be given a code, and you will provide that code to GitHub via <https://github.com/login/device>.
+
+
+## Staging model revisited
+
+![](images/git_workflow2.svg)
+
+## Updating the remote GitHub repo
+
+The command `git push` will put your local repository on the remote repository.
+
+. . .
+
+```         
+~/IntroGitDaSL/Collaborative_Git_GitHub_Student_Practice$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice.git
+   6e97634..0c82b47  main -> main
+```
+
+. . .
+
+If someone else has made updates to the remote repository and you want to update it locally, use `git pull`.
+
+Also, if the remote repository has been updated since you did `git pull`, you will have to run `git pull` before you can run `git push`.
+
+
+## Branching and Merging
+
+. . .
+
+Linear:
+
+```         
+o <-- o <-- o <-- o
+```
+
+. . .
+
+Branching:
+
+```         
+o <-- o <-- o <-- o
+            ^
+             \
+              --- o <-- o
+```
+
+. . .
+
+Branching and Merging:
+
+```         
+o <-- o <-- o <-- o <---- o
+            ^            /
+             \          v
+              --- o <-- o
+```
+
+. . .
+
+**Branching**: when branching commit paths are created.
+
+**Merging**: when two branches are integrated together. This sometimes require careful communication, and this is done in GitHub via a **"pull request".**
+
+
+
+## Creating a branch on the remote
+
+![](images/git_branch.png)
+
+## Making changes to this new branch locally
+
+The branch `clo2_development` is created on the remote, but it hasn't been updated locally. We run `git pull` locally to update it and switch to that branch via `git checkout`.
+
+. . .
+
+```         
+% git pull
+From https://github.com/fhdsl/S2_Collaborative_Git_GitHub_Student_Practice
+ * [new branch]      clo2_development -> origin/clo2_development
+Already up to date.
+
+% git checkout clo2_development
+Branch 'clo2_development' set up to track remote branch 'clo2_development' from 'origin'.
+Switched to a new branch 'clo2_development'
+```
+
+. . .
+
+We can use `git checkout main` to look switch back to our main branch. We can also use `git branch` to see the branches on a repository.
+
+
+## Making changes to new branch
+
+. . .
+
+Create a file that is unique to you.
+
+```         
+% touch clo2.txt
+% echo "hello" > clo2.txt
+% git add clo2.txt
+% git commit -m "Created clo2.txt"
+% git push
+```
+
+. . .
+
+When you have pushed changes to the branch, you will see an option to *"Compare & pull request"*. Click on it.
+
+![](images/git_PR1.png)
+
+## Pull request model
+
+A **pull request** is a way to propose changes from a branch before it is merged back into the main repository.
+
+. . .
+
+This is commonly used in collaborative work in which a branch needs to be approved by other members on the team before it is integrated into the main project.
+
+. . .
+
+![](images/git_PR_illustration.png)
+
+## Creating a pull request
+
+You will see that you are trying to merge `clo2_development` into `main` on the remote. It also requires you to write a description of what you did on your branch.
+
+. . .
+
+![](images/git_PR2.png)
+
+. . .
+
+## Creating a pull request
+
+![](images/git_PR3.png)
+
+
+. . .
+
+Optional: Add your partner's GitHub username as your reviewer, and have them make comments/create a code review about it!!
+
+. . .
+
+Optional: Make additional commits based on their comments.
+
+
+
+## Guidelines on pull request discussions
+
+For writers:
+
+-   it provides context of the code changes you made.
+
+-   it asks for explicit feedback of what kind of feedback is needed.
+
+-   it is a a small and modular change that can be discussed.
+
+For reviewers:
+
+-   Do the proposed changes answer the solve the problem? Can you test it out in the working branch?
+
+-   Is the code clear and readable?
+
+-   Is the code efficient with computational resources?
+
+-   Does the code stick to the style and conventions of this project?
+
+. . .
+
+Click *"Merge pull request"* to finish!
+
+## A Pull Request with conflicts
+
+-   Everyone create a new branch
+
+-   I'll modify `README.md` on the main branch
+
+-   You make changes to `README.md` on your branch, and make a Pull Request
+
+-   What to do with a conflict?
+
+## Other ways of interacting with Git and GitHub
+
+-   [GitHub Desktop](https://desktop.github.com/)
+
+-   [RStudio with usethis package](https://hutchdatascience.org/Tools_for_Reproducible_Workflows_in_R/using-github-in-a-workflow.html)
+
+-   [GitKraken](https://www.gitkraken.com/)
+
+**A nice troubleshooting guide**
+
+[DangItGit](https://dangitgit.com/en)

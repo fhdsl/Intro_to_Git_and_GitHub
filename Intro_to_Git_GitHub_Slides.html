@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="Git_Slides_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Git_Slides_files/libs/quarto-html/tabby.min.js"></script>
-<script src="Git_Slides_files/libs/quarto-html/popper.min.js"></script>
-<script src="Git_Slides_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="Git_Slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Git_Slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="Git_Slides_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="Git_Slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="Intro_to_Git_GitHub_Slides_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Intro_to_Git_GitHub_Slides_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Intro_to_Git_GitHub_Slides_files/libs/quarto-html/popper.min.js"></script>
+<script src="Intro_to_Git_GitHub_Slides_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Intro_to_Git_GitHub_Slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Intro_to_Git_GitHub_Slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Intro_to_Git_GitHub_Slides_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="Intro_to_Git_GitHub_Slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.353">
 
   <title>Intro to Git</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="Git_Slides_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="Git_Slides_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="Intro_to_Git_GitHub_Slides_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Intro_to_Git_GitHub_Slides_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,11 +29,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="Git_Slides_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="Git_Slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="Git_Slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="Git_Slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="Git_Slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="Intro_to_Git_GitHub_Slides_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="Intro_to_Git_GitHub_Slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Intro_to_Git_GitHub_Slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Intro_to_Git_GitHub_Slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Intro_to_Git_GitHub_Slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -331,8 +331,8 @@
 </div>
 
 </section>
-<section id="intro-to-git" class="slide level2">
-<h2>Intro to Git</h2>
+<section id="intro-to-git-and-github" class="slide level2">
+<h2>Intro to Git and GitHub</h2>
 
 <img data-src="images/Git.png" class="r-stretch"></section>
 <section id="introductions" class="slide level2">
@@ -374,7 +374,12 @@
 </div>
 <div class="fragment">
 <ul>
-<li>How to connect Git with GitHub.</li>
+<li>How to connect to GitHub</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>How to Branch and Merge via a Pull Request</li>
 </ul>
 </div>
 </section>
@@ -431,37 +436,28 @@
               --- o &lt;-- o</code></pre>
 </div>
 </section>
-<section id="set-up" class="slide level2">
-<h2>Set up</h2>
-<ol type="1">
-<li>Login to your GitHub account: https://github.com/login</li>
-</ol>
+<section id="cloning-a-repository" class="slide level2">
+<h2>Cloning a repository</h2>
+<p>Create a Replit account and “fork” this project: https://replit.com/<span class="citation" data-cites="ChrisLo6/GitAndGitHubDaSL">@ChrisLo6/GitAndGitHubDaSL</span></p>
 <div class="fragment">
-<ol start="2" type="1">
-<li>Create a Replit account and “fork” this project: https://replit.com/<span class="citation" data-cites="ChrisLo6/GitAndGitHubDaSL">@ChrisLo6/GitAndGitHubDaSL</span></li>
-</ol>
+<p>We will make a copy of this repository: https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice</p>
 </div>
 <div class="fragment">
-<ol start="4" type="1">
-<li>In your Replit shell,</li>
-</ol>
-<pre><code>sh setup.sh</code></pre>
-<p>You will be asked how you want to log in, and pick the following:</p>
-<pre><code>? What account do you want to log into? GitHub.com
-? What is your preferred protocol for Git operations? HTTPS
-? Authenticate Git with your GitHub credentials? Yes
-? How would you like to authenticate GitHub CLI? Login with a web browser</code></pre>
-<p>You will be given a code, and you will provide that code to GitHub via <a href="https://github.com/login/device" class="uri">https://github.com/login/device</a>.</p>
+<pre><code>% git clone https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice.git
+Cloning into 'Collaborative_Git_GitHub_Student_Practice'...
+remote: Enumerating objects: 94, done.
+remote: Counting objects: 100% (51/51), done.
+remote: Compressing objects: 100% (45/45), done.
+remote: Total 94 (delta 32), reused 12 (delta 5), pack-reused 43
+Receiving objects: 100% (94/94), 23.52 KiB | 7.84 MiB/s, done.
+Resolving deltas: 100% (37/37), done.
+
+% cd Collaborative_Git_GitHub_Student_Practice/</code></pre>
 </div>
 </section>
-<section id="create-your-first-local-repository" class="slide level2">
-<h2>Create your first local repository</h2>
-<p>We create a local repository:</p>
-<pre><code>mkdir sandbox
-cd sandbox
-git init
-Initialized empty Git repository.</code></pre>
-<p>We look at its status:</p>
+<section id="git-status" class="slide level2">
+<h2>Git status</h2>
+<p>We look at our repository’s status:</p>
 <pre><code>git status
 On branch main
 
@@ -541,49 +537,8 @@ nothing to commit, working tree clean</code></pre>
 <section id="exercises" class="slide level2">
 <h2>Exercises</h2>
 <ul>
-<li><p>Make some changes and make another commit by yourself.</p></li>
-<li><p>Modify <code>README</code>, stage it via <code>git add</code>, and then modify <code>README</code> again. Look at <code>git status</code>. How can <code>README</code> file be staged and unstaged at the same time? What should you do?</p></li>
-<li><p>Deleting a file: delete a committed file with <code>rm</code>. Then, look at <code>git status</code>. What do you need to do to commit this change? You will need to use the command <code>git rm</code>. Do the necessary steps and commit it.</p></li>
-<li><p>Moving a file: Rename a committed file with <code>mv</code>. Then, look at <code>git status</code>. What do you need to do to commit this change? You will need to use the command <code>git rm</code>. Do the necessary steps and commit it. Repeat this exercise again with <code>git mv</code>. This should be easier.</p></li>
+<li>Make some changes and make another commit by yourself.</li>
 </ul>
-</section>
-<section id="git-log" class="slide level2">
-<h2>Git log</h2>
-<div class="fragment">
-<p>Let’s take a look of the history of our repository by running <code>git log</code>:</p>
-<pre><code>git log
-commit 895508f4e36166ffdca046a3106e27b7f70f64c9 (HEAD -&gt; master)
-Author: Your Name &lt;you@example.com&gt;
-Date:   Tue Oct 17 18:15:08 2023 +0000
-
-    modified README
-
-commit 5380f9550ad012f4f7806572590becd01ca75972
-Author: Your Name &lt;you@example.com&gt;
-Date:   Tue Oct 17 18:13:59 2023 +0000
-
-    added README</code></pre>
-</div>
-<div class="fragment">
-<p>You can look at a previous commit state by <code>git checkout [commit ID]</code>, and return to the latest state by <code>git checkout master</code>.</p>
-</div>
-</section>
-<section id="undoing" class="slide level2">
-<h2>Undoing</h2>
-<div class="fragment">
-<p><strong>Unstage a file</strong></p>
-<p>You staged a file, and then realized you want to unstage it to “modified”: <code>git restore --staged [fileName]</code>.</p>
-</div>
-<div class="fragment">
-<p><strong>Unmodify a file</strong></p>
-<p>You have a file that’s “modified”. You are no longer interested and want to un-modify it back to the last commit: <code>git restore [fileName]</code>.</p>
-<p><em>Warning: This cannot be undone!</em></p>
-</div>
-<div class="fragment">
-<p><strong>Revert a commit</strong></p>
-<p>After several commits, you realized that you wanted to undo a specific commit: <code>git revert [commit identifier]</code>.</p>
-<p>This will undo that commit. However, if the content of that commit has experienced intermediate changes, it will raise a conflict.</p>
-</div>
 </section>
 <section id="connecting-to-github-as-a-remote" class="slide level2">
 <h2>Connecting to GitHub as a remote</h2>
@@ -591,43 +546,166 @@ Date:   Tue Oct 17 18:13:59 2023 +0000
 <p><strong>Remotes</strong> are repositories hosted often on a server, such as GitHub, so that other people can access the the remote from their local computer.</p>
 </div>
 <div class="fragment">
-<p>We want to connect our local repository to the remote repository you just created: <code>git remote add [remote name] [Git remote URL]</code></p>
-<pre><code>git remote add origin https://github.com/caalo/sandbox.git</code></pre>
+<p>We need to authenticate our GitHub account locally so that we have the permission to update the remote GitHub repository.</p>
 </div>
+</section>
+<section id="set-up" class="slide level2">
+<h2>Set up</h2>
+<ol type="1">
+<li>Login to your GitHub account: https://github.com/login</li>
+</ol>
 <div class="fragment">
-<p>Let’s <strong>push</strong> our commits to the remote:</p>
-<pre><code>git branch -M main
-git push -u origin main
-Enumerating objects: 3, done.
-Counting objects: 100(3/3), done.
-Writing objects: 100(3/3), 218 bytes | 218.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-To https://github.com/caalo/sandbox.git
- * [new branch]      main -&gt; main</code></pre>
+<ol start="2" type="1">
+<li>In your Replit shell,</li>
+</ol>
+<pre><code>sh ../setup.sh</code></pre>
+<p>You will be asked how you want to log in, and pick the following:</p>
+<pre><code>? What account do you want to log into? GitHub.com
+? What is your preferred protocol for Git operations? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Login with a web browser</code></pre>
+<p>You will be given a code, and you will provide that code to GitHub via <a href="https://github.com/login/device" class="uri">https://github.com/login/device</a>.</p>
 </div>
 </section>
 <section id="staging-model-revisited-1" class="slide level2">
 <h2>Staging model revisited</h2>
 
 <img data-src="images/git_workflow2.svg" class="r-stretch"></section>
-<section id="commit-before-push" class="slide level2">
-<h2>Commit before Push</h2>
-<p>Now, everything is synced up between our local repository and the remote repository.</p>
-<pre><code>git log
-commit 895508f4e36166ffdca046a3106e27b7f70f64c9 (HEAD -&gt; main, origin/main)
-Author: Your Name &lt;you@example.com&gt;
-Date:   Tue Oct 17 18:15:08 2023 +0000
-
-    modified README
-
-commit 5380f9550ad012f4f7806572590becd01ca75972
-Author: Your Name &lt;you@example.com&gt;
-Date:   Tue Oct 17 18:13:59 2023 +0000
-
-    added README</code></pre>
+<section id="updating-the-remote-github-repo" class="slide level2">
+<h2>Updating the remote GitHub repo</h2>
+<p>The command <code>git push</code> will put your local repository on the remote repository.</p>
 <div class="fragment">
-<p>If you make a new commit, but don’t push it yet, what happens?</p>
+<pre><code>~/IntroGitDaSL/Collaborative_Git_GitHub_Student_Practice$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice.git
+   6e97634..0c82b47  main -&gt; main</code></pre>
 </div>
+<div class="fragment">
+<p>If someone else has made updates to the remote repository and you want to update it locally, use <code>git pull</code>.</p>
+<p>Also, if the remote repository has been updated since you did <code>git pull</code>, you will have to run <code>git pull</code> before you can run <code>git push</code>.</p>
+</div>
+</section>
+<section id="branching-and-merging" class="slide level2">
+<h2>Branching and Merging</h2>
+<div class="fragment">
+<p>Linear:</p>
+<pre><code>o &lt;-- o &lt;-- o &lt;-- o</code></pre>
+</div>
+<div class="fragment">
+<p>Branching:</p>
+<pre><code>o &lt;-- o &lt;-- o &lt;-- o
+            ^
+             \
+              --- o &lt;-- o</code></pre>
+</div>
+<div class="fragment">
+<p>Branching and Merging:</p>
+<pre><code>o &lt;-- o &lt;-- o &lt;-- o &lt;---- o
+            ^            /
+             \          v
+              --- o &lt;-- o</code></pre>
+</div>
+<div class="fragment">
+<p><strong>Branching</strong>: when branching commit paths are created.</p>
+<p><strong>Merging</strong>: when two branches are integrated together. This sometimes require careful communication, and this is done in GitHub via a <strong>“pull request”.</strong></p>
+</div>
+</section>
+<section id="creating-a-branch-on-the-remote" class="slide level2">
+<h2>Creating a branch on the remote</h2>
+
+<img data-src="images/git_branch.png" class="r-stretch"></section>
+<section id="making-changes-to-this-new-branch-locally" class="slide level2">
+<h2>Making changes to this new branch locally</h2>
+<p>The branch <code>clo2_development</code> is created on the remote, but it hasn’t been updated locally. We run <code>git pull</code> locally to update it and switch to that branch via <code>git checkout</code>.</p>
+<div class="fragment">
+<pre><code>% git pull
+From https://github.com/fhdsl/S2_Collaborative_Git_GitHub_Student_Practice
+ * [new branch]      clo2_development -&gt; origin/clo2_development
+Already up to date.
+
+% git checkout clo2_development
+Branch 'clo2_development' set up to track remote branch 'clo2_development' from 'origin'.
+Switched to a new branch 'clo2_development'</code></pre>
+</div>
+<div class="fragment">
+<p>We can use <code>git checkout main</code> to look switch back to our main branch. We can also use <code>git branch</code> to see the branches on a repository.</p>
+</div>
+</section>
+<section id="making-changes-to-new-branch" class="slide level2">
+<h2>Making changes to new branch</h2>
+<div class="fragment">
+<p>Create a file that is unique to you.</p>
+<pre><code>% touch clo2.txt
+% echo "hello" &gt; clo2.txt
+% git add clo2.txt
+% git commit -m "Created clo2.txt"
+% git push</code></pre>
+</div>
+<div class="fragment">
+<p>When you have pushed changes to the branch, you will see an option to <em>“Compare &amp; pull request”</em>. Click on it.</p>
+<p><img data-src="images/git_PR1.png"></p>
+</div>
+</section>
+<section id="pull-request-model" class="slide level2">
+<h2>Pull request model</h2>
+<p>A <strong>pull request</strong> is a way to propose changes from a branch before it is merged back into the main repository.</p>
+<div class="fragment">
+<p>This is commonly used in collaborative work in which a branch needs to be approved by other members on the team before it is integrated into the main project.</p>
+</div>
+<div class="fragment">
+<p><img data-src="images/git_PR_illustration.png"></p>
+</div>
+</section>
+<section id="creating-a-pull-request" class="slide level2">
+<h2>Creating a pull request</h2>
+<p>You will see that you are trying to merge <code>clo2_development</code> into <code>main</code> on the remote. It also requires you to write a description of what you did on your branch.</p>
+<div class="fragment">
+<p><img data-src="images/git_PR2.png"></p>
+</div>
+</section>
+<section id="creating-a-pull-request-1" class="slide level2">
+<h2>Creating a pull request</h2>
+
+<img data-src="images/git_PR3.png" class="r-stretch"><div class="fragment">
+<p>Optional: Add your partner’s GitHub username as your reviewer, and have them make comments/create a code review about it!!</p>
+</div>
+<div class="fragment">
+<p>Optional: Make additional commits based on their comments.</p>
+</div>
+</section>
+<section id="guidelines-on-pull-request-discussions" class="slide level2">
+<h2>Guidelines on pull request discussions</h2>
+<p>For writers:</p>
+<ul>
+<li><p>it provides context of the code changes you made.</p></li>
+<li><p>it asks for explicit feedback of what kind of feedback is needed.</p></li>
+<li><p>it is a a small and modular change that can be discussed.</p></li>
+</ul>
+<p>For reviewers:</p>
+<ul>
+<li><p>Do the proposed changes answer the solve the problem? Can you test it out in the working branch?</p></li>
+<li><p>Is the code clear and readable?</p></li>
+<li><p>Is the code efficient with computational resources?</p></li>
+<li><p>Does the code stick to the style and conventions of this project?</p></li>
+</ul>
+<div class="fragment">
+<p>Click <em>“Merge pull request”</em> to finish!</p>
+</div>
+</section>
+<section id="a-pull-request-with-conflicts" class="slide level2">
+<h2>A Pull Request with conflicts</h2>
+<ul>
+<li><p>Everyone create a new branch</p></li>
+<li><p>I’ll modify <code>README.md</code> on the main branch</p></li>
+<li><p>You make changes to <code>README.md</code> on your branch, and make a Pull Request</p></li>
+<li><p>What to do with a conflict?</p></li>
+</ul>
 </section>
 <section id="other-ways-of-interacting-with-git-and-github" class="slide level2">
 <h2>Other ways of interacting with Git and GitHub</h2>
@@ -646,19 +724,19 @@ Date:   Tue Oct 17 18:13:59 2023 +0000
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="Git_Slides_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="Intro_to_Git_GitHub_Slides_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="Git_Slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="Git_Slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="Git_Slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="Git_Slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="Git_Slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="Intro_to_Git_GitHub_Slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Intro_to_Git_GitHub_Slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Intro_to_Git_GitHub_Slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Intro_to_Git_GitHub_Slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Intro_to_Git_GitHub_Slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="Git_Slides_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="Git_Slides_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="Git_Slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="Git_Slides_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="Intro_to_Git_GitHub_Slides_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Intro_to_Git_GitHub_Slides_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Intro_to_Git_GitHub_Slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Intro_to_Git_GitHub_Slides_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
