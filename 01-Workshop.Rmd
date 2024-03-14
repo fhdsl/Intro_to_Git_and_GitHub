@@ -50,38 +50,35 @@ This workflow of branching and merging is extremely popular in collaborative wor
 
 ## Set up
 
-### Installing Git
+### Accessing Replit to use Git
 
-If you are learning via [replit](https://replit.com/@ChrisLo6/IntroGitDaSL), then Git is already installed. See this guide for [installation info](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on your local computer.
+In this workshop, we use a virtual command line on Replit to use Git. To access the virtual command line on Replit, you should "fork" the following [workspace](https://replit.com/@clo22/IntroGitDaSL), and look at the "Shell" window. Git is installed in this Replit virtual system. After the workshop, if you want to install Git locally, see this guide for [installation info](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
 
-### Installing GitHub Command Line Tools
 
-If you are learning via [replit](https://replit.com/@ChrisLo6/IntroGitDaSL), then GitHub Command Line Tools is already installed. See this website for [installation info](https://cli.github.com/) on your local computer. This is a piece of software that allows you to connect to GitHub from the command line.
+Additionally, we use GitHub Command Line Tools to connect to GitHub from the command line. This software is already installed on the Replit virtual system. After the workshop, if you want to install GitHub Command Line Tools locally, wee this website for [installation info](https://cli.github.com/).
 
 ### Create a GitHub account
 
 Create your GitHub account [here](https://github.com/login).
 
-### Adding your information for Git
 
-This helps Git record your author information when you make commits:
+### Connecting Git to your GitHub account
+
+We connect Git to your GitHub account via GitHub CLI via the following script:
+
+```
+% sh setup.sh
+```
+
+When you run the script, it registers you as a dummy user in all Git commits and connects you to GitHub. This is what is in the script:
 
 ```         
 % git config --global user.name "Your Name"
 % git config --global user.email "address@email.com"
-```
-
-Replace `Your Name` with your name and `address@email.com` with your email address.
-
-### Connecting Git to your GitHub account
-
-We connect Git to your GitHub account via GitHub CLI:
-
-```         
 % gh auth login
 ```
 
-You will be asked how you want to log in, and pick the following:
+Once you run the script, you will be asked how you want to log in, and pick the following:
 
 ```         
 ? What account do you want to log into? GitHub.com
@@ -296,7 +293,9 @@ This branch and merge workflow can be used for collaborative projects, but can a
 
 ## Branching
 
-We first create a branch, called `clo2_development`, on our remote repository.
+For the following examples on branching and pull requests, you will need write access to the repository. This is given to students enrolled in the workshop. If you are not enrolled, please follow along in a read-only manner. 
+
+We first create a branch, called `clo2_development`, on our remote repository. You can subsitute "clo2" with your own identifier. 
 
 ![](images/git_branch.png)
 
