@@ -1,21 +1,15 @@
-# {Course Name}
+# Intro to Git and GitHub
 
 This course was created from [this GitHub template](https://github.com/jhudsl/OTTR_Template).
 
-You can see the rendered course material here: {Link to rendered bookdown and/or to the Leanpub.}
+You can see the rendered course material [here](https://hutchdatascience.org/Intro_to_Git_and_GitHub/index.html)
 
 If you would like to contribute to this course material, take a look at the [OTTR documentation](https://www.ottrproject.org/).
 
 ## About this course
 
-This course introduces {info on what this course introduces}
+You will learn how to use Git, a version control system that is the primary means of doing reproducible and collaborative research. You will use Git from the command line to document the history of your code, create different versions of your code, and share your code with an audience via GitHub!
 
-## Learning Objectives
-
-This course will teach learners to:  
-
-- {You can use https://www.bobpikegroup.com/trainer-blog/5-steps-to-writing-clear-and-measurable-learning-objectives to define some learning objectives here}
-- {More learning objectives}
 
 ## Encountering problems?
 
