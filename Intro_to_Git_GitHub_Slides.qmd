@@ -1,5 +1,5 @@
 ---
-title: "Intro to Git"
+title: "Intro to Git and GitHub"
 format: 
   revealjs:
     smaller: true
@@ -26,7 +26,6 @@ format:
 
     -   What brought you here?
 
-
 ## Goals of the workshop
 
 . . .
@@ -48,7 +47,6 @@ format:
 . . .
 
 -   How to Branch and Merge via a Pull Request
-
 
 ## Why version control?
 
@@ -116,7 +114,7 @@ o <-- o <-- o <-- o <---- o
 
 ## Cloning a repository
 
-Create a Replit account and "fork" this project: https://replit.com/@ChrisLo6/GitAndGitHubDaSL
+Create a Replit account and "fork" this project: [https://replit.com/\@ChrisLo6/IntroGitDaSL](https://replit.com/@ChrisLo6/IntroGitDaSL)
 
 . . .
 
@@ -144,10 +142,9 @@ We look at our repository's status:
 ```         
 git status
 On branch main
+Your branch is up to date with 'origin/main'.
 
-No commits yet
-
-nothing to commit (create/copy files and use "git add" to track)
+nothing to commit, working tree clean
 ```
 
 ## Git's Staging Model
@@ -185,31 +182,38 @@ Why offer this intermediate staging ground?
 Create a file:
 
 ```         
-touch README
+touch chris.txt
 ```
 
 ```         
 git status
+
 On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-    README
+    chris.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 . . .
 
-It hasn't been **tracked** yet. Add it to be tracked and **staged**.
+Take it from **untracked** to **staged**.
 
 ```         
-git add README 
+git add chris.txt
 
 git status
 On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-    new file:   README
+    new file:   chris.txt
 ```
 
 . . .
@@ -217,14 +221,10 @@ Changes to be committed:
 **Commit** it with a message:
 
 ```         
-git commit -m "Added README"
-[main bb926a2] Added README
- 1 file changed, 1 insertion(+)
- create mode 100644 README
- 
-clo2@MGQQR2YQRT9 sandbox git status
-On branch main
-nothing to commit, working tree clean
+git commit -m "added chris.txt"
+[main 31f7b15] added chris.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 chris.txt
 ```
 
 ## Staging model revisited
@@ -234,7 +234,6 @@ nothing to commit, working tree clean
 ## Exercises
 
 -   Make some changes and make another commit by yourself.
-
 
 ## Connecting to GitHub as a remote
 
@@ -246,13 +245,11 @@ nothing to commit, working tree clean
 
 We need to authenticate our GitHub account locally so that we have the permission to update the remote GitHub repository.
 
-
 ## Set up
 
 1.  Login to your GitHub account: https://github.com/login
 
 . . .
-
 
 2.  In your Replit shell,
 
@@ -270,7 +267,6 @@ You will be asked how you want to log in, and pick the following:
 ```
 
 You will be given a code, and you will provide that code to GitHub via <https://github.com/login/device>.
-
 
 ## Staging model revisited
 
@@ -300,7 +296,6 @@ To https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice.git
 If someone else has made updates to the remote repository and you want to update it locally, use `git pull`.
 
 Also, if the remote repository has been updated since you did `git pull`, you will have to run `git pull` before you can run `git push`.
-
 
 ## Branching and Merging
 
@@ -340,8 +335,6 @@ o <-- o <-- o <-- o <---- o
 
 **Merging**: when two branches are integrated together. This sometimes require careful communication, and this is done in GitHub via a **"pull request".**
 
-
-
 ## Creating a branch on the remote
 
 ![](images/git_branch.png)
@@ -367,18 +360,16 @@ Switched to a new branch 'clo2_development'
 
 We can use `git checkout main` to look switch back to our main branch. We can also use `git branch` to see the branches on a repository.
 
-
 ## Making changes to new branch
 
 . . .
 
-Create a file that is unique to you.
+Edit the file that is unique to you.
 
 ```         
-% touch clo2.txt
-% echo "hello" > clo2.txt
-% git add clo2.txt
-% git commit -m "Created clo2.txt"
+% nano chris.txt
+% git add chris.txt
+% git commit -m "Edited chris.txt"
 % git push
 ```
 
@@ -414,7 +405,6 @@ You will see that you are trying to merge `clo2_development` into `main` on the 
 
 ![](images/git_PR3.png)
 
-
 . . .
 
 Optional: Add your partner's GitHub username as your reviewer, and have them make comments/create a code review about it!!
@@ -422,8 +412,6 @@ Optional: Add your partner's GitHub username as your reviewer, and have them mak
 . . .
 
 Optional: Make additional commits based on their comments.
-
-
 
 ## Guidelines on pull request discussions
 

@@ -10,7 +10,7 @@
 <link href="Intro_to_Git_GitHub_Slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.353">
 
-  <title>Intro to Git</title>
+  <title>Intro to Git and GitHub</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -325,7 +325,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Intro to Git</h1>
+  <h1 class="title">Intro to Git and GitHub</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -414,9 +414,6 @@
 <div class="fragment">
 <p><img data-src="https://git-scm.com/book/en/v2/images/snapshots.png"></p>
 </div>
-<div class="fragment">
-<p>When do you make a commit?</p>
-</div>
 </section>
 <section id="gits-data-model-with-branching-and-merging" class="slide level2">
 <h2>Git’s Data Model with “branching” and “merging”</h2>
@@ -439,10 +436,9 @@
               --- o &lt;-- o</code></pre>
 </div>
 </section>
-<<<<<<< HEAD:Intro_to_Git_GitHub_Slides.html
 <section id="cloning-a-repository" class="slide level2">
 <h2>Cloning a repository</h2>
-<p>Create a Replit account and “fork” this project: https://replit.com/<span class="citation" data-cites="ChrisLo6/GitAndGitHubDaSL">@ChrisLo6/GitAndGitHubDaSL</span></p>
+<p>Create a Replit account and “fork” this project: <a href="https://replit.com/@ChrisLo6/IntroGitDaSL">https://replit.com/@ChrisLo6/IntroGitDaSL</a></p>
 <div class="fragment">
 <p>We will make a copy of this repository: https://github.com/fhdsl/Collaborative_Git_GitHub_Student_Practice</p>
 </div>
@@ -457,25 +453,6 @@ Receiving objects: 100% (94/94), 23.52 KiB | 7.84 MiB/s, done.
 Resolving deltas: 100% (37/37), done.
 
 % cd Collaborative_Git_GitHub_Student_Practice/</code></pre>
-=======
-<section id="set-up" class="slide level2">
-<h2>Set up</h2>
-<ol type="1">
-<li>Create a Replit account and “fork” this project: https://replit.com/<span class="citation" data-cites="ChrisLo6/IntroGitDaSL">@ChrisLo6/IntroGitDaSL</span></li>
-</ol>
-<div class="fragment">
-<ol start="2" type="1">
-<li>In your Replit shell,</li>
-</ol>
-<pre><code>sh setup.sh</code></pre>
-<p>You will be asked how you want to log in, and pick the following:</p>
-<pre><code>Link for authentication: https://github.com/login/device
-? What account do you want to log into? GitHub.com
-? What is your preferred protocol for Git operations? HTTPS
-? Authenticate Git with your GitHub credentials? Yes
-? How would you like to authenticate GitHub CLI? Login with a web browser</code></pre>
-<p>You will be given a code, and you will provide that code to GitHub via <a href="https://github.com/login/device" class="uri">https://github.com/login/device</a>.</p>
->>>>>>> main:Git_Slides.html
 </div>
 </section>
 <section id="git-status" class="slide level2">
@@ -483,10 +460,9 @@ Resolving deltas: 100% (37/37), done.
 <p>We look at our repository’s status:</p>
 <pre><code>git status
 On branch main
+Your branch is up to date with 'origin/main'.
 
-No commits yet
-
-nothing to commit (create/copy files and use "git add" to track)</code></pre>
+nothing to commit, working tree clean</code></pre>
 </section>
 <section id="gits-staging-model" class="slide level2">
 <h2>Git’s Staging Model</h2>
@@ -522,35 +498,38 @@ nothing to commit (create/copy files and use "git add" to track)</code></pre>
 <h2>Making your first commit</h2>
 <div class="fragment">
 <p>Create a file:</p>
-<pre><code>touch README</code></pre>
+<pre><code>touch chris.txt</code></pre>
 <pre><code>git status
+
 On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
 Untracked files:
   (use "git add &lt;file&gt;..." to include in what will be committed)
-    README
+    chris.txt
 
 nothing added to commit but untracked files present (use "git add" to track)</code></pre>
 </div>
 <div class="fragment">
-<p>It hasn’t been <strong>tracked</strong> yet. Add it to be tracked and <strong>staged</strong>.</p>
-<pre><code>git add README 
+<p>Take it from <strong>untracked</strong> to <strong>staged</strong>.</p>
+<pre><code>git add chris.txt
 
 git status
 On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
 Changes to be committed:
   (use "git restore --staged &lt;file&gt;..." to unstage)
-    new file:   README</code></pre>
+    new file:   chris.txt</code></pre>
 </div>
 <div class="fragment">
 <p><strong>Commit</strong> it with a message:</p>
-<pre><code>git commit -m "Added README"
-[main bb926a2] Added README
- 1 file changed, 1 insertion(+)
- create mode 100644 README
- 
-clo2@MGQQR2YQRT9 sandbox git status
-On branch main
-nothing to commit, working tree clean</code></pre>
+<pre><code>git commit -m "added chris.txt"
+[main 31f7b15] added chris.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 chris.txt</code></pre>
 </div>
 </section>
 <section id="staging-model-revisited" class="slide level2">
@@ -663,11 +642,10 @@ Switched to a new branch 'clo2_development'</code></pre>
 <section id="making-changes-to-new-branch" class="slide level2">
 <h2>Making changes to new branch</h2>
 <div class="fragment">
-<p>Create a file that is unique to you.</p>
-<pre><code>% touch clo2.txt
-% echo "hello" &gt; clo2.txt
-% git add clo2.txt
-% git commit -m "Created clo2.txt"
+<p>Edit the file that is unique to you.</p>
+<pre><code>% nano chris.txt
+% git add chris.txt
+% git commit -m "Edited chris.txt"
 % git push</code></pre>
 </div>
 <div class="fragment">
