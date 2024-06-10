@@ -4,7 +4,8 @@
 
 As the book [ProGit](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) puts it, "Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later". You probably have tried some form of version control yourself: the simplest form of version control consists of carefully duplicating and organizing your files that you have a history of your edits, but that is prone to inconsistency and errors. **Git** is a version control software that does this systematically for you.
 
-![A: Solo work with DIY version control via filename. B: Collaborative work with DIY version control. C: Solo work with Version Control. D: Collaborative work with Version Control.](images/git_motivation.png){width="400"}
+![A: Solo work with DIY version control via filename. B: Collaborative work with DIY version control. C: Solo work with Version Control. D: Collaborative work with Version Control.\
+Image Source: [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/)](images/git_motivation.png){width="400"}
 
 **GitHub** is a website that allows you to store Git projects remotely online. It facilitates collaboration, open-source coding, and provides user-friendly features to work on multiple versions of a project simultaneously.
 
@@ -18,7 +19,8 @@ To reduce redundancy in storing the commit information, Git will see what has ch
 
 Below is an illustration of a repository's commit history. Each version (commit) points to a parent version (commit), and a directory tree is associated with each commit. Some, but not all, files are changed at each commit.
 
-![Git model with a linear history. (Source: ProGit)](https://git-scm.com/book/en/v2/images/snapshots.png)
+![Git model with a linear history.\
+Image Source: [ProGit](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)](https://git-scm.com/book/en/v2/images/snapshots.png)
 
 What is a reasonable amount of changes you should have before making a commit? Well, every time you make a commit, you have to submit a concise **commit message**. This encourages good documentation of the changes you made, and usually you want to make a commit when you have made a modular change to the repository you have been working on.
 
@@ -52,8 +54,7 @@ This workflow of branching and merging is extremely popular in collaborative wor
 
 ### Accessing Replit to use Git
 
-In this workshop, we use a virtual command line on Replit to use Git. To access the virtual command line on Replit, you should "fork" the following [workspace](https://replit.com/@clo22/IntroGitDaSL), and look at the "Shell" window. Git is installed in this Replit virtual system. After the workshop, if you want to install Git locally, see this guide for [installation info](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
-
+In this workshop, we use a virtual command line on Replit to use Git. To access the virtual command line on Replit, you should "fork" the following [workspace](https://replit.com/@clo22/IntroGitDaSL), and look at the "Shell" window. Git is installed in this Replit virtual system. After the workshop, if you want to install Git locally, see this guide for [installation info](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 Additionally, we use GitHub Command Line Tools to connect to GitHub from the command line. This software is already installed on the Replit virtual system. After the workshop, if you want to install GitHub Command Line Tools locally, wee this website for [installation info](https://cli.github.com/).
 
@@ -61,12 +62,11 @@ Additionally, we use GitHub Command Line Tools to connect to GitHub from the com
 
 Create your GitHub account [here](https://github.com/login).
 
-
 ### Connecting Git to your GitHub account
 
 We connect Git to your GitHub account via GitHub CLI via the following script:
 
-```
+```         
 % sh setup.sh
 ```
 
@@ -293,9 +293,9 @@ This branch and merge workflow can be used for collaborative projects, but can a
 
 ## Branching
 
-For the following examples on branching and pull requests, you will need write access to the repository. This is given to students enrolled in the workshop. If you are not enrolled, please follow along in a read-only manner. 
+For the following examples on branching and pull requests, you will need write access to the repository. This is given to students enrolled in the workshop. If you are not enrolled, please follow along in a read-only manner.
 
-We first create a branch, called `clo2_development`, on our remote repository. You can subsitute "clo2" with your own identifier. 
+We first create a branch, called `clo2_development`, on our remote repository. You can subsitute "clo2" with your own identifier.
 
 ![](images/git_branch.png)
 
